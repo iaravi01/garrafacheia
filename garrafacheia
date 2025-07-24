@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Exclusivo de Vinhos no WhatsApp</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f3ee;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        h1 {
+            color: #5a1a1a;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .lead-box {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 30px 0;
+            text-align: center;
+            border: 1px solid #e0c9c1;
+        }
+        
+        .lead-box h2 {
+            color: #5a1a1a;
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .benefits {
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .benefits ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .benefits li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .benefits li:before {
+            content: "🍷";
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        
+        .wine-image {
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .counter {
+            font-size: 1.2em;
+            color: #5a1a1a;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Grupo Garrafa Cheia no WhatsApp</h1>
+            <p>Junte-se a entusiastas de vinho e descubra o mundo fascinante dos vinhos!</p>
+            <img src="https://cdn.pixabay.com/photo/2017/09/25/18/56/wine-2785976_640.png" alt="Copo de Vinho" class="wine-image">
+            <div class="counter">Junte-se aos nossos <span id="memberCount">1.234</span> apaixonados por vinho!</div>
+        </header>
+        
+        <div class="lead-box">
+            <h2>Participe do nosso grupo Garrafa Cheia!</h2>
+            <p>Receba dicas exclusivas, descubra promoções e converse com outros apaixonados por vinho.</p>
+            
+            <div class="benefits">
+                <h3>O que você vai encontrar no grupo:</h3>
+                <ul>
+                    <li>Dicas de harmonização com alimentos</li>
+                    <li>Recomendações de vinhos para todos os bolsos</li>
+                    <li>Promoções exclusivas de vinícolas parceiras</li>
+                    <li>Tutoriais sobre degustação profissional</li>
+                    <li>Eventos exclusivos para membros</li>
+                </ul>
+            </div>
+            
+            <a href="https://whats.ly/garrafacheia" class="whatsapp-btn">Acesse o grupo do Whatsapp</a>
+            
+            <p><small>Grupo exclusivo para maiores de 18 anos</small></p>
+        </div>
+        
+        <footer>
+            <p>© 2023 Grupo Garrafa Cheia. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simulação de contador de membros (você pode substituir por um número real)
+        document.addEventListener('DOMContentLoaded', function() {
+            const target = 1234;
+            const counter = document.getElementById('memberCount');
+            let current = 0;
+            const increment = target / 50;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current).toLocaleString();
+                    setTimeout(updateCounter, 50);
+                } else {
+                    counter.textContent = target.toLocaleString();
+                }
+            };
+            
+            updateCounter();
+        });
+    </script>
+</body>
+</html>
